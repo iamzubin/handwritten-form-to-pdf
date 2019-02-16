@@ -36,5 +36,11 @@ def generate_form(form_name, fields):
     draw_lines(file_name, y_axis_lines)
     put_text_in_image(file_name, list(fields.keys()), y_axis_lines)
 
+    points_for_ocr = [] # These points are in pixals
+    for y in y_axis_lines:
+        points_for_ocr.append((100, y, 2380, y))
+    
+    return points_for_ocr
+
 fields = {"Name :": 1, "Age :": 1, "Sex :": 1, "Email :": 1, "Home Address :": 4}
 generate_form("test", fields)
