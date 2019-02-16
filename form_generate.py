@@ -1,5 +1,11 @@
 from PIL import Image, ImageDraw, ImageFont
 
+'''
+For using this file call the function generate_form and give it the fields of your form with number of lines you want in it.
+fields = {"Name :": 1, "Age :": 1, "Sex :": 1, "Email :": 1, "Home Address :": 4}
+generate_form("test", fields)
+'''
+
 def create_image(image_name, width, height):
     image = Image.new('RGB', (width, height), color = 'white')
     image.save(image_name)
@@ -41,9 +47,3 @@ def generate_form(form_name, fields):
         points_for_ocr.append((100, y, 2380, y))
     
     return points_for_ocr
-
-'''
-For using this file call the function generate_form and give it the fields of your form with number of lines you want in it.
-fields = {"Name :": 1, "Age :": 1, "Sex :": 1, "Email :": 1, "Home Address :": 4}
-generate_form("test", fields)
-'''
