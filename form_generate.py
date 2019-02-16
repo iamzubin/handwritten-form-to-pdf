@@ -42,5 +42,8 @@ def generate_form(form_name, fields):
     
     return points_for_ocr
 
+'''
+For using this file call the function generate_form and give it the fields of your form with number of lines you want in it.
 fields = {"Name :": 1, "Age :": 1, "Sex :": 1, "Email :": 1, "Home Address :": 4}
 generate_form("test", fields)
+'''
