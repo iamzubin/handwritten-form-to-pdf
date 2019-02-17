@@ -23,7 +23,7 @@ def put_text_in_image(image_name, text_list, y_axis_list):
 
 def get_lines_position(image_name, divisions_with_lines):
     list_of_y_axis = []
-    current_line = 250
+    current_line = 400
     list_of_y_axis.append(current_line)
     for values in divisions_with_lines:
         current_line = (values * 150) + current_line
