@@ -15,7 +15,7 @@ def draw_lines(image_name, y_axis_list):
 def put_text_in_image(image_name, text_list, y_axis_list):
     image = Image.open(image_name)
     draw = ImageDraw.Draw(image)
-    font = ImageFont.truetype("Arial.ttf", 45)
+    font = ImageFont.truetype("Tahoma.ttf", 45)
     # draw.text((x, y),"Sample Text",(r,g,b))
     for y_axis, put_text in zip(y_axis_list, text_list):
         draw.text((140, y_axis + 50), put_text, (0,0,0), font=font)
@@ -33,7 +33,7 @@ def get_lines_position(image_name, divisions_with_lines):
 def generate_form(form_name, fields):
     all_position_text = []
     file_name = form_name + ".png"
-    create_image(file_name, 2480, 3508)
+    create_image(file_name, 2480, 3508) # A4 size: 2480x3508
     y_axis_lines = get_lines_position(file_name, list(fields.values()))
     draw_lines(file_name, y_axis_lines)
     put_text_in_image(file_name, list(fields.keys()), y_axis_lines)
