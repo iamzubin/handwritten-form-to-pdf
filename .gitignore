@@ -1,2 +1,5 @@
 creds.json
 *.jpg
+__pycache__
+*.pyc
+.vscode
