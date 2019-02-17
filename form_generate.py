@@ -39,5 +39,4 @@ def generate_form(form_name, fields):
     put_text_in_image(file_name, list(fields.keys()), y_axis_lines)
     for pos in y_axis_lines:
         all_position_text.append([100, pos, 2380, pos])
-    all_position_text = all_position_text[:-1]
     return all_position_text
