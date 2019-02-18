@@ -19,6 +19,6 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('formgen/', views.formgen),
-    path('imganal/', views.imganal)
+    path('formgen/', views.FormGen.as_view()),
+    path('imganal/', views.ImgAnal.as_view()),
 ]
