@@ -22,27 +22,21 @@ def detect_document(path):
 
     for page in response.full_text_annotation.pages:
         for block in page.blocks:
-            print('\nBlock confidence: {}\n'.format(block.confidence))
-
+            # print('\nBlock confidence: {}\n'.format(block.confidence))
             for paragraph in block.paragraphs:
-                print('Paragraph confidence: {}'.format(
-                    paragraph.confidence))
-
+                # print('Paragraph confidence: {}'.format(paragraph.confidence))
                 for word in paragraph.words:
                     word_text = ''.join([
                         symbol.text for symbol in word.symbols
                     ])
-                    print('Word text: {} (confidence: {})'.format(
-                        word_text, word.confidence))
-
+                    # print('Word text: {} (confidence: {})'.format(word_text, word.confidence))
                     for symbol in word.symbols:
-                        print('\tSymbol: {} (confidence: {})'.format(
-                            symbol.text, symbol.confidence))
+                        # print('\tSymbol: {} (confidence: {})'.format(ymbol.text, symbol.confidence))
                         output += symbol.text
     
-    print(output)
-    return(output)
+    # print(output)
+    return output
 
 
 if __name__ == "__main__":
-    detect_document('a.jpg')
+    print("why call this? call cli.py")

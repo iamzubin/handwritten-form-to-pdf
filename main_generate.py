@@ -1,6 +1,6 @@
 import form_generate
 
-fields = {"Name : ": 1, "Roll no : ": 1, "Address : ": 4}
+fields = {"Name": 1, "Roll no": 1, "Address": 4}
 file_name = "test"
 pos_file = open(file_name + ".txt", "w")
 

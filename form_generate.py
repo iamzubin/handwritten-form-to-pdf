@@ -18,7 +18,7 @@ def put_text_in_image(image_name, text_list, y_axis_list):
     font = ImageFont.truetype("Tahoma.ttf", 45)
     # draw.text((x, y),"Sample Text",(r,g,b))
     for y_axis, put_text in zip(y_axis_list, text_list):
-        draw.text((140, y_axis + 50), put_text+': ', (0,0,0), font=font)
+        draw.text((140, y_axis + 50), put_text+' : ', (0,0,0), font=font)
     image.save(image_name)
 
 def get_lines_position(image_name, divisions_with_lines):

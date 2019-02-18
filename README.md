@@ -1,3 +1,3 @@
 # handwritten-form-to-pdf
 
-In colabration with Shreyas Papinwar and Palash Agarwal
+In collabration with Shreyas Papinwar and Palash Agarwal
