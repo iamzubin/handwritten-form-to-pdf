@@ -4,3 +4,5 @@ __pycache__
 *.pyc
 .vscode
 .DS_Store
+forms/
+analyse/

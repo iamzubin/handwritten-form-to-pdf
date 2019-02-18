@@ -18,7 +18,7 @@ def put_text_in_image(image_name, text_list, y_axis_list):
     font = ImageFont.truetype("Tahoma.ttf", 45)
     # draw.text((x, y),"Sample Text",(r,g,b))
     for y_axis, put_text in zip(y_axis_list, text_list):
-        draw.text((140, y_axis + 50), put_text, (0,0,0), font=font)
+        draw.text((140, y_axis + 50), put_text+': ', (0,0,0), font=font)
     image.save(image_name)
 
 def get_lines_position(image_name, divisions_with_lines):
@@ -31,12 +31,9 @@ def get_lines_position(image_name, divisions_with_lines):
     return list_of_y_axis
 
 def generate_form(form_name, fields):
-    all_position_text = []
-    file_name = form_name + ".png"
+    file_name = 'forms/' + form_name + ".png"
     create_image(file_name, 2480, 3508) # A4 size: 2480x3508
     y_axis_lines = get_lines_position(file_name, list(fields.values()))
     draw_lines(file_name, y_axis_lines)
     put_text_in_image(file_name, list(fields.keys()), y_axis_lines)
-    for pos in y_axis_lines:
-        all_position_text.append([100, pos, 2380, pos])
-    return all_position_text
+    return file_name
